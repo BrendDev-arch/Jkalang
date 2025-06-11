@@ -1,10 +1,14 @@
-public class Formiga extends Personagem{
+import java.util.Scanner;   
+public class Formiga extends Personagem implements IArmamento{
+    Scanner sc = new Scanner(System.in);
     @Override
     public void mover() {
+
         System.out.println(" Formiga Trabalhando: " + "\n");
         int energy = super.getEnergia();
         boolean continuar = true;
-        energy = 10;
+        energy = sc.nextInt();
+        System.out.println("\n");
         if (continuar) { 
             while (energy > 4) { 
                 continuar = false;
@@ -24,6 +28,7 @@ public class Formiga extends Personagem{
     @Override
     public void dormir(int energia) {    
         super.dormir(energia);
+    
         boolean continuar = true;
         if(continuar) {  
             while (energia < 14){
@@ -37,7 +42,7 @@ public class Formiga extends Personagem{
     @Override
     public void comer() {
         int energiaComendo = super.getEnergia();
-        energiaComendo = 14;
+        energiaComendo = sc.nextInt();
         if (energiaComendo <= 45 ) {
             for(int i = 0 ; i <= 10 ; i++){
                 energiaComendo++;  
@@ -50,7 +55,7 @@ public class Formiga extends Personagem{
     @Override
     public void cansado() {
         int energy = super.getEnergia();
-        energy = 5;            
+        energy = sc.nextInt();            
         if (energy <=  5 ){
             for(int i = 0 ; i <= 2 ; i++){
                 energy--;  
@@ -62,7 +67,14 @@ public class Formiga extends Personagem{
 
     public void setNome(String nome){
         super.setNome(nome);
-        System.out.println( super.getNome());
+        System.out.println(super.getNome());
+        
+    }
+
+
+    @Override
+    public void atacar() {
+        System.out.println("Atacar com 3 formas diferentes: ");
         
     }
     

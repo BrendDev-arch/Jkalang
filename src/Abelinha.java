@@ -1,4 +1,4 @@
-public class Abelinha extends Personagem {
+public class Abelinha extends Personagem implements IArmamento{
 
     @Override
     public void mover() {
@@ -60,6 +60,12 @@ public class Abelinha extends Personagem {
     public void setNome(String nome){
         super.setNome(nome);
         System.out.println( super.getNome());
+        
+    }
+
+    @Override
+    public void atacar() {
+        System.out.println("Atacar com 4 formas diferentes");
         
     }
 }

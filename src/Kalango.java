@@ -1,4 +1,4 @@
-public class Kalango extends Personagem{
+public class Kalango extends Personagem implements IArmamento{
 
     @Override
     public void mover() {
@@ -58,5 +58,11 @@ public class Kalango extends Personagem{
     public void setNome(String nome){
         super.setNome(nome);
         System.out.println(super.getNome());     
+    }
+
+    @Override
+    public void atacar() {
+        System.out.println("Atacar com 2 formas: ");
+        
     }
 }

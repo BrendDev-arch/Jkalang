@@ -13,6 +13,8 @@ public class App {
         System.out.println("\n");
         f.comer();
         System.out.println("\n");
+        f.atacar();
+        System.out.println("\n");
         Kalango k = new Kalango();
         k.setNome("-------Kalango----------"  + "\n");
         System.out.println("\n");
@@ -26,6 +28,8 @@ public class App {
         System.out.println("\n");
         k.comer();
         System.out.println("\n");
+        k.atacar();
+        System.out.println("\n");
         Abelinha A = new Abelinha();
         A.setNome("------Abelinha----"  + "\n");
         System.out.println("\n");
@@ -38,5 +42,9 @@ public class App {
         A.dormir(10);
         System.out.println("\n");
         A.comer();
+        System.out.println("\n");
+        A.atacar();
+
+        
     }
 }
