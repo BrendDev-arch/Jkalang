@@ -4,34 +4,38 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class JSplash extends JFrame {
+public class JGame extends JFrame {
 
-    public JSplash(){
-        // Formulário
-        
+    public JGame() {
+
         setTitle("JKalango Adventure");
-        setSize(600, 500);
+        setSize(600, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        setLayout(new FlowLayout());
-        
-        // Botão
-        JButton starButton =  new JButton("Start");
-        add(starButton);
+        setLayout(new BorderLayout());
 
-        // evento ao botão que ao clicar mostre a mensagem
+        JButton starButton =  new JButton("Iniciar primeira missão");
+        add(starButton,BorderLayout.SOUTH);
+
+
+       
+
         starButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                JOptionPane.showMessageDialog(JSplash.this, "JKalango");
+                JOptionPane.showMessageDialog(JGame.this, "Primeira missão iniciada");
             }      
         });
+
         
-        // mostrar o formulário
         setVisible(true);
 
 
@@ -39,4 +43,3 @@ public class JSplash extends JFrame {
 
 
 }
-    

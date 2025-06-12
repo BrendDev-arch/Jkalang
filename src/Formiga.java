@@ -1,13 +1,12 @@
-import java.util.Scanner;   
+;   
 public class Formiga extends Personagem implements IArmamento{
-    Scanner sc = new Scanner(System.in);
     @Override
     public void mover() {
 
         System.out.println(" Formiga Trabalhando: " + "\n");
         int energy = super.getEnergia();
         boolean continuar = true;
-        energy = sc.nextInt();
+        energy = 10;
         System.out.println("\n");
         if (continuar) { 
             while (energy > 4) { 
@@ -42,7 +41,7 @@ public class Formiga extends Personagem implements IArmamento{
     @Override
     public void comer() {
         int energiaComendo = super.getEnergia();
-        energiaComendo = sc.nextInt();
+        energiaComendo = 40;
         if (energiaComendo <= 45 ) {
             for(int i = 0 ; i <= 10 ; i++){
                 energiaComendo++;  
@@ -55,7 +54,7 @@ public class Formiga extends Personagem implements IArmamento{
     @Override
     public void cansado() {
         int energy = super.getEnergia();
-        energy = sc.nextInt();            
+        energy = 4;            
         if (energy <=  5 ){
             for(int i = 0 ; i <= 2 ; i++){
                 energy--;  

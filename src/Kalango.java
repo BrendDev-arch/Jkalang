@@ -62,7 +62,7 @@ public class Kalango extends Personagem implements IArmamento{
 
     @Override
     public void atacar() {
-        System.out.println("Atacar com 2 formas: ");
+        System.out.println("Atacar com 2 formas diferentes: ");
         
     }
 }
