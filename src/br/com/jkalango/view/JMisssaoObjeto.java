@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import java.awt.Color;     // Para definir cores
 import java.awt.Font;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -16,9 +15,13 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class JGame extends JFrame {
+import br.com.jkalango.bo.IColor;
 
-    public JGame() {
+
+
+public class JMisssaoObjeto extends JFrame implements IColor {
+
+    public JMisssaoObjeto(){
 
         setTitle("JKalango Adventure");
         setSize(700, 400);
@@ -31,12 +34,12 @@ public class JGame extends JFrame {
     
  
         label.setText( "<html><body style='text-align: center; color: white; font-family: \\\"Press Start 2P\\\", cursive; font-size: 10px; text-shadow: 1px 1px 2px black;'>"
-        + "A brisa quente da manhã balançava as folhas da Floresta Sussurrante, onde Jkalango, um jovem "
-        + "lagarto com escamas verde-esmeralda e olhos curiosos, passava seus dias caçando insetos e "
-        + "sonhando com grandes feitos. Ele era pequeno, é verdade, mas seu coração era do tamanho de "
-        + "um cajueiro. A paz da floresta foi quebrada por um lamento distante, um som que fez os pássaros "
-        + "se calarem e as folhas pararem de sussurrar. Era o chamado desesperado da Velha Araucária, a "
-        + "árvore mais antiga e sábia da região, que há séculos protegia a floresta."
+        + "Um dia, a paz da floresta foi quebrada por um lamento distante, um som que fez os pássaros se calarem e as "
+        + "folhas pararem de sussurrar. Era o chamado desesperado da Velha Araucária, a árvore mais antiga e sábia da "
+        + "região, que há séculos protegia a floresta. "
+        + "JKalango, formiga e abelinha, vós sois os escolhidos para restaurar o equilíbrio da floresta. Cada um de vós "
+        + "representa um objeto único, com características e comportamentos distintos, mas todos com um propósito "
+        + "comum: salvar nossa casa."
         + "</body></html>"); 
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setForeground(Color.WHITE);
@@ -44,28 +47,31 @@ public class JGame extends JFrame {
         
 
 
-        JPanel panelFundo = new JPanel();
-        panelFundo.setBackground(Color.GRAY);
-        panelFundo.setLayout(new BorderLayout());
-        add(panelFundo);
-  
-        JButton starButton =  new JButton(" Primeira missão ");
+        //JPanel panelFundo = new JPanel();
+        //panelFundo.setBackground(Color.BLUE);
+        //panelFundo.setLayout(new BorderLayout());
+        //add(panelFundo);
+
+        
+    
+    
+        JButton starButton =  new JButton("Continua");
         starButton.setFocusPainted(false);
 
-        add(label, BorderLayout.CENTER);
-
+        
         JPanel panelButton = new JPanel(new FlowLayout(FlowLayout.CENTER));
         panelButton.setBackground(Color.BLACK);
         panelButton.add(starButton);
         add(panelButton, BorderLayout.SOUTH);
+
+        add(label, BorderLayout.CENTER);
 
        
 
         starButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                //JOptionPane.showMessageDialog(JGame.this, "Primeira missão Iniciada);
-                new JMisssaoObjeto();
+                JOptionPane.showMessageDialog(JMisssaoObjeto.this, "segunda missão concluida");
             }      
         });
 
@@ -74,6 +80,20 @@ public class JGame extends JFrame {
 
 
     }
+
+    @Override
+    public void Mudarcor() {
+        JPanel panelFundo = new JPanel();
+        panelFundo.setBackground(Color.BLUE);
+        panelFundo.setLayout(new BorderLayout());
+        add(panelFundo);
+
+
+
+    }
+
+
+
 
 
 }
