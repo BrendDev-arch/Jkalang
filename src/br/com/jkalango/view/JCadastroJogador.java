@@ -28,7 +28,7 @@ public class JCadastroJogador extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 450);
         setLocationRelativeTo(null);
-        setLayout(new FlowLayout(FlowLayout.CENTER,10,10));
+        setLayout(new FlowLayout(FlowLayout.CENTER,50,20));
 
         lbl = new JLabel("Nome");
         add(lbl);
@@ -37,7 +37,6 @@ public class JCadastroJogador extends JFrame {
         add(txt);
 
         lbl1 = new JLabel("nickname");
-        lbl1.getBounds();
         add(lbl1);
 
         txt1 = new JTextField(20);
@@ -57,7 +56,7 @@ public class JCadastroJogador extends JFrame {
 
         lbl4 = new JLabel("Senha");
         add(lbl4);
-        
+
         password = new JPasswordField(20);
         add(password);
 
