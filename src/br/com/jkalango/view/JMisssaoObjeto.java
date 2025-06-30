@@ -15,16 +15,16 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import br.com.jkalango.bo.IColor;
 
 
 
-public class JMisssaoObjeto extends JFrame implements IColor {
+
+public class JMisssaoObjeto extends JFrame {
 
     public JMisssaoObjeto(){
 
         setTitle("JKalango Adventure");
-        setSize(700, 400);
+        setSize(400, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
@@ -52,7 +52,7 @@ public class JMisssaoObjeto extends JFrame implements IColor {
         //panelFundo.setLayout(new BorderLayout());
         //add(panelFundo);
 
-        
+
     
     
         JButton starButton =  new JButton("Continua");
@@ -66,6 +66,10 @@ public class JMisssaoObjeto extends JFrame implements IColor {
 
         add(label, BorderLayout.CENTER);
 
+
+        JMisssaoObjeto mudar = new JMisssaoObjeto();
+
+
        
 
         starButton.addActionListener(new ActionListener() {
@@ -77,17 +81,6 @@ public class JMisssaoObjeto extends JFrame implements IColor {
 
         
         setVisible(true);
-
-
-    }
-
-    @Override
-    public void Mudarcor() {
-        JPanel panelFundo = new JPanel();
-        panelFundo.setBackground(Color.BLUE);
-        panelFundo.setLayout(new BorderLayout());
-        add(panelFundo);
-
 
 
     }

@@ -21,7 +21,7 @@ public class JGame extends JFrame {
     public JGame() {
 
         setTitle("JKalango Adventure");
-        setSize(700, 400);
+        setSize(400, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
@@ -65,7 +65,8 @@ public class JGame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 //JOptionPane.showMessageDialog(JGame.this, "Primeira missão Iniciada);
-                new JMisssaoObjeto();
+                new JCadastroJogador();
+                dispose();
             }      
         });
 
